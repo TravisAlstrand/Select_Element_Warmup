@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ===== DRY ===== */
+
+body,
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label,
+select,
+button {
+  width: 100%;
+}
+
+select,
+button {
+  height: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+label,
+button,
+#error-message,
+#success-message {
+  font-weight: bold;
+}
+
+select,
+#error-message,
+#success-message {
+  text-align: center;
+}
+
+#error-message,
+#success-message {
+  font-size: 1.5rem;
+  animation: message 2s linear;
+}
+
+select:focus,
+button:focus   {
+  border: 2px solid green;  
+}
+
+/* =============== */
+
+body {
+  background-color: rgb(104, 165, 194);
+}
+
+h1 {
+  color: rgb(206, 221, 123);
+  text-shadow: 2px 2px black;
+}
+
+form {
+  width: 50%;
+  max-width: 400px;
+  height: 50vh;
+  padding: 1.5rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: rgb(206, 221, 123);
+}
+
+label {
+  margin-bottom: .5rem;
+}
+
+select {
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: green;
+}
+
+#error-message {
+  color: red;
+}
+
+#success-message {
+  color: green;
+}
+
+@keyframes message {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}

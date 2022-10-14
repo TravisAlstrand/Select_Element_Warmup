@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Practice</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Select Menu Practice</h1>
+  <form id="form" action="index.html" method="post" novalidate>
+    <label for="animals">Dogs or Cats?</label>
+    <select name="animal-select" id="animals">
+      <option hidden>Select an animal</option>
+      <option value="Dogs">Dogs</option>
+      <option value="Cats">Cats</option>
+    </select>
+    <label for="breeds">Favorite Breed?</label>
+    <select name="animal-breeds" id="breeds">
+      <option hidden>Select a breed</option>
+      <option data-breed="Dogs" value="dog-chihuahua">Dogs: Chihuahua</option>
+      <option data-breed="Dogs" value="dog-pitbull">Dogs: Pit Bull</option>
+      <option data-breed="Dogs" value="dog-labrador">Dogs: Labrador</option>
+      <option data-breed="Cats" value="cat-siamese">Cats: Siamese</option>
+      <option data-breed="Cats" value="cat-persian">Cats: Persian</option>
+      <option data-breed="Cats" value="cat-himalayan">Cats: Himalayan</option>
+    </select>
+    <button type="submit">SUBMIT</button>
+    <p id="success-message">WOOHOO! The animal and breed match!</p>
+    <p id="error-message">OOPS! The animal and breed don't match!</p>
+  </form>
+  <script src="/script.js"></script>
+</body>
+</html>
