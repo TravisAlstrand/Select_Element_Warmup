@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  --clr-green: #5fcf80;
+  --clr-gray: #576366;
+  --clr-blue: #326e99;
 }
 
 /* ===== DRY ===== */
@@ -19,7 +23,6 @@ button {
 
 select,
 button {
-  height: 2rem;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -38,25 +41,28 @@ select,
 }
 
 #error-message,
-#success-message {
+#success-message,
+select,
+button {
   font-size: 1.5rem;
-  animation: message 2s linear;
 }
 
-select:focus,
-button:focus   {
-  border: 2px solid green;  
+#error-message,
+#success-message {
+  animation: message 2s linear;
+  text-shadow: 1px 1px black;
+}
+
+h1,
+button {
+  color: var(--clr-green);
+  text-shadow: 2px 2px black;
 }
 
 /* =============== */
 
 body {
-  background-color: rgb(104, 165, 194);
-}
-
-h1 {
-  color: rgb(206, 221, 123);
-  text-shadow: 2px 2px black;
+  background-color: var(--clr-gray);
 }
 
 form {
@@ -66,7 +72,7 @@ form {
   padding: 1.5rem;
   border: 3px solid black;
   border-radius: 15px;
-  background-color: rgb(206, 221, 123);
+  background-color: var(--clr-green);
 }
 
 label {
@@ -75,10 +81,14 @@ label {
 
 select {
   margin-bottom: 2rem;
+  height: 3rem;
 }
 
 button {
-  background-color: green;
+  height: 4rem;
+  padding: .5rem;
+  color: var(--clr-green);
+  background-color: var(--clr-blue);
 }
 
 #error-message {
@@ -86,7 +96,7 @@ button {
 }
 
 #success-message {
-  color: green;
+  color: var(--clr-blue);
 }
 
 @keyframes message {

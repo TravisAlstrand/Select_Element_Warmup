@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  --clr-green: #5fcf80;
+  --clr-gray: #576366;
+  --clr-blue: #326e99;
+}
+
+/* ===== DRY ===== */
+
+body,
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label,
+select,
+button {
+  width: 100%;
+}
+
+select,
+button {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+label,
+button,
+#error-message,
+#success-message {
+  font-weight: bold;
+}
+
+select,
+#error-message,
+#success-message {
+  text-align: center;
+}
+
+#error-message,
+#success-message,
+select,
+button {
+  font-size: 1.5rem;
+}
+
+#error-message,
+#success-message {
+  animation: message 2s linear;
+  text-shadow: 1px 1px black;
+}
+
+h1,
+button {
+  color: var(--clr-green);
+  text-shadow: 2px 2px black;
+}
+
+/* =============== */
+
+body {
+  background-color: var(--clr-gray);
+}
+
+form {
+  width: 50%;
+  max-width: 400px;
+  height: 50vh;
+  padding: 1.5rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: var(--clr-green);
+}
+
+label {
+  margin-bottom: .5rem;
+}
+
+select {
+  margin-bottom: 2rem;
+  height: 3rem;
+}
+
+button {
+  height: 4rem;
+  padding: .5rem;
+  color: var(--clr-green);
+  background-color: var(--clr-blue);
+}
+
+#error-message {
+  color: red;
+}
+
+#success-message {
+  color: var(--clr-blue);
+}
+
+@keyframes message {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
