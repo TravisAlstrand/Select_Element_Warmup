@@ -22,7 +22,7 @@ animalSelect.addEventListener("change", () => {
 
   const animal = animalSelect.value;
 
-  // breedSelect.firstElementChild.selected = true;
+  breedSelect.firstElementChild.selected = true;
 
   breedOptions.forEach(option => {
     if (animal !== option.getAttribute("data-breed")) {
