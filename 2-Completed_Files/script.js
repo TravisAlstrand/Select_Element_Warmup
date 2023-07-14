@@ -1,27 +1,27 @@
-// select the animals select element and store it in a variable
+// 1: select the animals select element and store it in a variable
 const animalSelect = document.querySelector("#animals");
-// select the breeds select element and store it in a variable
+// 2: select the breeds select element and store it in a variable
 const breedSelect = document.querySelector("#breeds");
-// select all of the option elements with a [data-theme] attribute and store them in a variable
+// 3: select all of the option elements with a [data-theme] attribute and store them in a variable
 const breedOptions = document.querySelectorAll("option[data-breed]");
 
-// 1: add an event listener on the animals select element that listens for a "change" event
+// 4: add an event listener on the animals select element that listens for a "change" event
 animalSelect.addEventListener("change", () => {
-  // 2: start a loop to iterate over each breed option
+  // 5: start a loop to iterate over each breed option
   breedOptions.forEach((option) => {
-    // 3: check if the animals select value is NOT equal to the current breed option's [data-breed] attribute value
+    // 6: check if the animals select value is NOT equal to the current breed option's [data-breed] attribute value
     if (animalSelect.value !== option.getAttribute("data-breed")) {
-      // 4: if they are not equal, hide the current breed option
+      // 7: if they are not equal, hide the current breed option
       option.hidden = true;
     } else {
-      // 5: if they are equal, unhide (or show) the current breed option
+      // 8: if they are equal, unhide (or show) the current breed option
       option.hidden = false;
     }
   });
 
-  // 6. check if the breeds select value is NOT equal to an empty string
+  // 9. check if the breeds select value is NOT equal to an empty string
   if (breedSelect.value !== "") {
-    // 7. if step 6 is true, set the breeds select value to the second option's value
+    // 10. if it's not an empty string, set the breeds select value to the second option's value
     breedSelect.value = "reselect";
   }
 });
