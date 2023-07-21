@@ -2,7 +2,7 @@
 const animalSelect = document.querySelector("#animals");
 // 2: select the breeds select element and store it in a variable
 const breedSelect = document.querySelector("#breeds");
-// 3: select all of the option elements with a [data-theme] attribute and store them in a variable
+// 3: select all of the option elements with a [data-breed] attribute and store them in a variable
 const breedOptions = document.querySelectorAll("option[data-breed]");
 
 // 4: add an event listener on the animals select element that listens for a "change" event
