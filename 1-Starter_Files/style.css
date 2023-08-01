@@ -114,7 +114,7 @@ button {
   color: var(--clr-primary);
 }
 
-.message {
+#message {
   animation: message 2s linear;
 }
 

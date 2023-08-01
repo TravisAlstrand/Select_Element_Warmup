@@ -39,11 +39,9 @@ message.style.display = "none";
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const isMatch =
-    (document.querySelector("#animals").value.includes("Dogs") &&
-      document.querySelector("#breeds").value.includes("Dogs")) ||
-    (document.querySelector("#animals").value.includes("Cats") &&
-      document.querySelector("#breeds").value.includes("Cats"));
+  const isMatch = document
+    .querySelector("#breeds")
+    .value.includes(document.querySelector("#animals").value);
 
   if (isMatch) {
     updateMessage("WOOHOO! The animal / breeds match!", isMatch);
@@ -62,7 +60,7 @@ function updateMessage(text, isMatch) {
   } else {
     message.classList.add("error");
   }
-
-  message.offsetHeight;
-  message.classList.add("message");
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 2500);
 }
