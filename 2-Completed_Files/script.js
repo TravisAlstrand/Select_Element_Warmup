@@ -13,9 +13,11 @@ animalSelect.addEventListener("change", () => {
     if (animalSelect.value !== option.getAttribute("data-breed")) {
       // 7: if they are not equal, hide the current breed option
       option.hidden = true;
+      option.disabled = true;
     } else {
       // 8: if they are equal, unhide (or show) the current breed option
       option.hidden = false;
+      option.disabled = false;
     }
   });
 
