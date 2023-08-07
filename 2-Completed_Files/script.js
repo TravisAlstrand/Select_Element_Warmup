@@ -41,9 +41,11 @@ message.style.display = "none";
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const isMatch = document
-    .querySelector("#breeds")
-    .value.includes(document.querySelector("#animals").value);
+  const isMatch =
+    document
+      .querySelector("#breeds")
+      .value.includes(document.querySelector("#animals").value) &&
+    document.querySelector("#animals").value !== "";
 
   if (isMatch) {
     updateMessage("WOOHOO! The animal / breeds match!", isMatch);
