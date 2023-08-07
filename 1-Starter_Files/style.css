@@ -97,7 +97,6 @@ button {
   height: 4rem;
   padding: 0.5rem;
   color: var(--clr-primary);
-
   background-color: var(--clr-btn);
 }
 
