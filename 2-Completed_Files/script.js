@@ -8,18 +8,18 @@ const breedOptions = document.querySelectorAll("option[data-breed]");
 // 4: add an event listener on the animals select element that listens for a "change" event
 animalSelect.addEventListener("change", () => {
   // 5: start a loop to iterate over each breed option
-  breedOptions.forEach((option) => {
+  for (let i = 0; i < breedOptions.length; i++) {
     // 6: check if the animals select value is NOT equal to the current breed option's [data-breed] attribute value
-    if (animalSelect.value !== option.getAttribute("data-breed")) {
+    if (animalSelect.value !== breedOptions[i].getAttribute("data-breed")) {
       // 7: if they are not equal, hide the current breed option
-      option.hidden = true;
-      option.disabled = true;
+      breedOptions[i].hidden = true;
+      breedOptions[i].disabled = true;
     } else {
       // 8: if they are equal, unhide (or show) the current breed option
-      option.hidden = false;
-      option.disabled = false;
+      breedOptions[i].hidden = false;
+      breedOptions[i].disabled = false;
     }
-  });
+  }
 
   // 9. check if the breeds select value is NOT equal to an empty string
   if (breedSelect.value !== "") {
