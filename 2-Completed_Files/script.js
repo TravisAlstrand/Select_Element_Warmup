@@ -35,8 +35,8 @@ animalSelect.addEventListener("change", () => {
 //====================DON'T CHANGE THE CODE BELOW===============================//
 //==============================================================================//
 const form = document.querySelector("#form");
-const message = document.querySelector("#message");
-message.style.display = "none";
+const icon = document.querySelector("img");
+icon.style.display = "none";
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -48,23 +48,23 @@ form.addEventListener("submit", (e) => {
     document.querySelector("#animals").value !== "";
 
   if (isMatch) {
-    updateMessage("WOOHOO! The animal / breeds match!", isMatch);
-    message.style.display = "inherit";
+    icon.style.display = "inherit";
   } else {
-    updateMessage("OOPS! The animal / breeds don't match!", isMatch);
-    message.style.display = "inherit";
+    icon.style.display = "inherit";
   }
+  updateIcon(isMatch);
 });
 
-function updateMessage(text, isMatch) {
-  message.className = "";
-  message.textContent = text;
+function updateIcon(isMatch) {
+  icon.className = "";
   if (isMatch) {
-    message.classList.add("success");
+    icon.src = "./images/success.png";
+    icon.alt = "form success icon";
   } else {
-    message.classList.add("error");
+    icon.src = "./images/error.png";
+    icon.alt = "form error icon";
   }
   setTimeout(() => {
-    message.style.display = "none";
-  }, 2500);
+    icon.style.display = "none";
+  }, 1500);
 }

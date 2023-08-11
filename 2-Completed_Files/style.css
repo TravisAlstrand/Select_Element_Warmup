@@ -4,7 +4,6 @@
   --clr-primary: #5fcf80;
   --clr-bg: #576366;
   --clr-btn: #326e99;
-  --clr-err: #ea6565;
 }
 
 /* ===== DRY ===== */
@@ -29,18 +28,15 @@ button {
 }
 
 label,
-button,
-#message {
+button {
   font-weight: bold;
 }
 
 h1,
-select,
-#message {
+select {
   text-align: center;
 }
 
-#message,
 label,
 select,
 button {
@@ -67,7 +63,7 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  margin-block: 4rem;
+  margin-block: 2rem;
 }
 
 form {
@@ -94,26 +90,18 @@ select:last-of-type {
 }
 
 button {
+  position: relative;
   height: 4rem;
   padding: 0.5rem;
   color: var(--clr-primary);
   background-color: var(--clr-btn);
 }
 
-#message {
-  margin-top: 2rem;
-  text-shadow: 1px 1px black;
-}
-
-.error {
-  color: var(--clr-err);
-}
-
-.success {
-  color: var(--clr-primary);
-}
-
-#message {
+img {
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  width: 50px;
   animation: message 2s linear;
 }
 
